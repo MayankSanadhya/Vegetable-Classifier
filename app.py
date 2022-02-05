@@ -2,10 +2,10 @@ import streamlit as st
 import tensorflow as tf
 
 @st.cache(allow_output_mutation=True)
-def load_model():
-    model = load_model('cnn.h5')
-    return model
-model = load_model()
+def import_model(x):
+    classifier = tf.keras.models.load_model(x)
+    return classifier
+model = import_model('cnn.h5')
 st.write("""
           # Vegetable Prediction
          """
