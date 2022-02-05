@@ -11,7 +11,7 @@ st.write("""
          """
         )
 file = st.file_uploader("Please upload an vegetable image",type=['jpg'])
-import cv2
+#import cv2
 from PIL import Image,ImageOps
 import numpy as np
 def import_and_predict(image_data,model):
