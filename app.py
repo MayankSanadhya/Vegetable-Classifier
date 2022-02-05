@@ -27,7 +27,7 @@ if file is None:
     st.text("Please Upload an image file")
 else:
     image = Image.open(file)
-    st.image(image,use_column,width=True)
+    st.image(image,use_column_width=True)
     predictions = import_and_predict(image,model)
     class_names = ['Bean','Bitter_Gourd','Bottle_Gourd','Brinjal','Broccoli','Cabbage','Capsicum','Carrot','Cauliflower','Cucumber','Papaya','Potato','Pumpkin','Radish','Tomato']
     string = "This image most likely is : "+ class_names[np.argmax(predictions)]
